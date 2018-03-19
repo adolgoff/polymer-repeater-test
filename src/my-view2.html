@@ -32,7 +32,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <dom-repeat items="[[items]]">
         <template>
           <paper-dropdown-menu label="Dinosaurs [[index]]">
-              <paper-listbox slot="dropdown-content" selected="1">
+              <paper-listbox slot="dropdown-content" selected="{{selected}}">
                 <paper-item>allosaurus</paper-item>
                 <paper-item>brontosaurus</paper-item>
                 <paper-item>carcharodontosaurus</paper-item>
@@ -54,7 +54,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             value() {
               return new Array(152)
             }
-          }
+          },
+
+          selected: {
+            type: Number,
+            value: 1,
+          },
         };
       }
     }
