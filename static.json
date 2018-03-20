@@ -3,6 +3,7 @@
   "https_only": true,
   "clean_urls": false,
   "routes": {
+    "/bower_components/**": "bower_components/",
     "/**": "index.html"
   },
   "headers": {
